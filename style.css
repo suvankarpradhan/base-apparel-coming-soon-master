@@ -13,7 +13,6 @@
 .container {
   flex-direction: row;
   background: url("images/bg-pattern-desktop.svg") no-repeat;
-  background-attachment: fixed;
 }
 .left-portion,
 .right-portion {
@@ -22,6 +21,9 @@
 }
 .left-portion {
   margin: 5% 10%;
+}
+.top-portion {
+  display: none;
 }
 .heading {
   padding-top: 20%;
@@ -99,4 +101,39 @@ input[type="email"] {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .container {
+    flex-direction: column;
+    background-size: cover;
+  }
+  .site-logo {
+    margin: 10%;
+  }
+  .left-portion {
+    flex: 100%;
+    margin: 0%;
+  }
+  .right-portion {
+    display: none;
+  }
+  .top-portion {
+    margin-top: 15%;
+    display: block;
+  }
+  .top-portion > img {
+    width: 100%;
+  }
+  .heading {
+    padding-top: 15%;
+  }
+  .heading > h1,
+  .body-text > p {
+    padding: 3% 8%;
+    text-align: center;
+  }
+  .email-form {
+    width: 85%;
+    margin: 5%;
+  }
 }

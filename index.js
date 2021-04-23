@@ -4,10 +4,10 @@ $('.ebtn').click(()=>{
     if(mailformat.test(email)){
         $('.email-form').css('border-color','hsl(0, 6%, 20%)');
         $('.error-msg').text('');
-        $('.logo').removeClass('error');         
+        $('.icon').removeClass('error');         
     }else{
         $('.email-form').css('border-color','hsl(0, 93%, 68%)');
         $('.error-msg').text('Please provide a valid email');
-        $('.logo').addClass('error');       
+        $('.icon').addClass('error');       
     }
 })
